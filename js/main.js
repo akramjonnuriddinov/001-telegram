@@ -13,6 +13,8 @@ if(elsFormCountryItem) {
     item.addEventListener('click', function() {
       elFormCountry.value = elsFormCountryName[index].outerText;
       elCountryWrapper.classList.remove('country-wrapper--open');
+      elToggleIconDown.classList.remove('toggle-icon--none');
+      elToggleIconUp.classList.add('toggle-icon--none');
     });
   })
 }
@@ -26,3 +28,10 @@ if(elFormCountry) {
   });
 }
 
+// AUTHIFICAITON
+const elAuthBtn = document.querySelector('.js-auth-btn');
+const elAuthTel = document.querySelector('.js-auth-tel');
+
+elAuthBtn.addEventListener('click', function() {
+  localStorage.setItem('value', elAuthTel.value);
+})
