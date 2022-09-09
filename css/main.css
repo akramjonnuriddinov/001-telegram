@@ -19,6 +19,7 @@ body {
   background-color: #212121;
   color: #fff;
   font-family: "Arial", sans-serif;
+  overflow-y: hidden;
 }
 
 .container {
@@ -36,6 +37,13 @@ body {
   align-items: center;
   padding-top: 48px;
   padding-bottom: 64px;
+  overflow-y: auto;
+  max-height: 100vh;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+.auth__container:hover {
+  scrollbar-color: #4D4D4D transparent;
 }
 
 .auth__title {
@@ -124,14 +132,19 @@ input:focus {
   left: 0;
   transform: translateY(-15px);
   overflow-y: auto;
-  max-height: 50vh;
+  max-height: 60vh;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+.form__country-list:hover {
+  scrollbar-color: #4D4D4D transparent;
 }
 
 .form__country-item {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 15px;
+  cursor: pointer;
 }
 .form__country-item:hover {
   background-color: #2B2B2B;
@@ -140,6 +153,11 @@ input:focus {
 .form__country-img {
   width: 26px;
   height: 26px;
+  margin-right: 20px;
+}
+
+.form__country-num {
+  margin-left: auto;
 }
 
 .auth__tel {
@@ -172,7 +190,17 @@ input:focus {
   border: none;
   border-radius: 10px;
   cursor: pointer;
+  margin-bottom: 5px;
 }
 .auth__btn:hover {
   background-color: #6A52DA;
+}
+
+.auth__qr-btn {
+  background-color: transparent;
+  color: #8774e1;
+  margin-bottom: 0;
+}
+.auth__qr-btn:hover {
+  background-color: #292730;
 }/*# sourceMappingURL=main.css.map */
